@@ -45,6 +45,7 @@ def draw(win, targets):
     for target in targets:
         target.draw(win)
         print('hello')
+    pygame.display.update()
 
 def main():
     run  = True
