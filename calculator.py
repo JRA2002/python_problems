@@ -14,7 +14,7 @@ def calculator():
         if calculator[i + 1] == '-':
             res = res - float(calculator[i + 2])
         if calculator[i + 1] == '*':
-            res = res - float(calculator[i + 2])
+            res = res * float(calculator[i + 2])
     return res
 
 res = calculator()
