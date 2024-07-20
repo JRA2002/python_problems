@@ -5,6 +5,5 @@ def fibonacci(num):
         return 0
     return fibonacci(num - 2)  + fibonacci(num - 1)
 
-num = 7
-for i in range(0,num):
-    print(fibonacci(i))
+num = fibonacci(7)
+print(num)
