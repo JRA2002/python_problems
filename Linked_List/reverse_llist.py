@@ -25,6 +25,17 @@ class LinkedList:
             current = next
         self.head = prev
 
+    def find_data_reverse(self, n):
+        self.reverse()
+        length = 1
+        current = self.head
+        while length < n:
+            length += 1
+            current = current.next
+
+        data = current.data
+        return data
+
     def rotate(self, k):
         if self.head is None:
             return self.head
@@ -61,7 +72,7 @@ node.insertNode(1)
 
 print("my linked list")
 node.printLL()
-print("rotate LList")
-node.rotate(3)
-node.printLL()
+print("find_data")
+res = node.find_data(2)
+print(res)
 

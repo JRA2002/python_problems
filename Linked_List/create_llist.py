@@ -88,6 +88,26 @@ class LinkedList:
                 current_node.next = current_node.next.next
             else:
                 print('Index Not present')
+    
+    def remove_middle(self):
+        if self.head is None:
+            return
+        current = self.head
+        length = 0
+        while current.next != None:
+            length += 1
+            current = current.next
+        middle = (length // 2) + 1
+
+        if length == 1:
+            return None
+        position = 1
+        current = self.head
+        while position < middle :
+            position += 1
+            current = current.next
+        current.next = current.next.next
+        
             
     def remove_node_by_value(self, data):
         current_node = self.head
@@ -101,6 +121,18 @@ class LinkedList:
                 return
             else:
                 current_node.next = current_node.next.next
+    def remove_duplicate(self):
+        temp = self.head.data
+        current = self.head
+        print(current.data)
+        position = 0
+        while current != None:
+            current.data
+            position += 1
+            current = current.next
+    
+
+
     def size_llist(self):
         size = 0
         if self.head:
@@ -123,17 +155,18 @@ class LinkedList:
 
 
 llist = LinkedList()
-llist.insertNode(2)
+
+llist.insertNode(5)
 llist.insertNode(3)
-llist.insertNode(4)
-llist.insertAtIndex(5, 2)
-llist.updateNode('a', 0)
+llist.insertNode(3)
+llist.insertNode(2)
+llist.insertNode(1)
 
 print("Node Data")
 llist.printLL()
+llist.remove_duplicate()
 print("size of linked list")
-res = llist.size_llist()
-print(res)
+llist.printLL()
 
 
 
