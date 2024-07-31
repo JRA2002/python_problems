@@ -5,5 +5,7 @@ def fibonacci(num):
         return 0
     return fibonacci(num - 2)  + fibonacci(num - 1)
 
-num = fibonacci(7)
-print(num)
+for i in range(7):
+    print(fibonacci(i))
+print(bin(10))
+print(int('1010', base=0))
