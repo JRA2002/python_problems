@@ -22,7 +22,13 @@ def power_of_two(v):
     res = (v & (v - 1)) == 0
     return res
 
-bin = bin(30)
+def is_even(n):
+    return (n & 1) == 0
+
+bin = bin(6)[2:]
 print(bin)
-integer = int('0b1111', base=0)
+integer = int('0b11110', base=0)
 print(integer)
+a = (2,3)
+
+print(a[0])

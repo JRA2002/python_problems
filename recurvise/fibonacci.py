@@ -5,7 +5,10 @@ def fibonacci(num):
         return 0
     return fibonacci(num - 2)  + fibonacci(num - 1)
 
-for i in range(7):
-    print(fibonacci(i))
-print(bin(10))
-print(int('1010', base=0))
+num = 22
+j = 0
+res = fibonacci(j)
+while res < num:
+    print(res)
+    res = fibonacci(j)
+    j += 1
