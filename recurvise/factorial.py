@@ -1,7 +1,7 @@
-'''def factorial(num):
+def factorial(num):
     if num == 1:
         return 1
-    return factorial(num - 1) * num'''
+    return factorial(num - 1) * num
 
 # using tail recursion
 def new_factorial(num, acum=1):
@@ -9,5 +9,5 @@ def new_factorial(num, acum=1):
         return acum
     return new_factorial(num - 1, num * acum)
 
-res = new_factorial(5)
+res = factorial(15)
 print(res)
