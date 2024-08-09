@@ -14,5 +14,6 @@ def count_distinct(arr, k):
     return lista
 
 arr = [1, 2, 1, 3, 4, 2, 3]
+arr.sort()
 res = count_distinct(arr, 4)
 print(res)
