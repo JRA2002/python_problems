@@ -3,7 +3,7 @@ Given a set of intervals, check if any two intervals intersect. '''
 
 def overlaping(arr: list):
     arr.sort()
-    fo
+    
     a = arr[0][1] - arr[0][0]
     if a in arr[1]:
         return True, arr
