@@ -10,28 +10,30 @@ def convert(s):
     'D': 500,
     'M': 1000
 }
-    
-    end = len(s)
-    start = end - 2
-    num = 0
+    result = 0
+    i = 0
 
-    while end > 0:
-        a = s[start:end]
-        if len(a) == 1:
-            num = num + romans[a[0]]
-        
-        elif a[0] < a[1]:
-            num = num + (romans[a[1]] - romans[a[0]])
-        elif a[0] >= a[1]:
-            num = num + (romans[a[1]] + romans[a[0]])
+    while i < len(s):
+        r1 = romans[s[i]]
 
-        end = start
-        start = end - 2
-        if start < 0:
-            start = 0
+        if i + 1 < len(s):
+            r2 = romans[s[i+1]]
+        else:
+            r2 = 0
+        if r1 > r2 :
+            result = result + r1
+        elif r1 == r2 :
+            result = result + 2 * r1
+            i += 1
+        else:
+            result = result + romans[s[i+1]] - romans[s[i]]
+            i += 1
+        i += 1
     
-    return num
+    return result
+
     
-s = 'XCVIII'
+    
+s = 'MCDXXVI'
 res = convert(s)
 print(res)
