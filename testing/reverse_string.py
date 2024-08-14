@@ -1,8 +1,8 @@
 
 def reverse(number):
-    print("original number", number)
-    original_num = number
     
+    if number <= 0 :
+        return 0
     # reverse the given number
     reverse_num = 0
     reverse_num_sep = ''
@@ -14,6 +14,7 @@ def reverse(number):
 
     # check numbers
     
-    print(reverse_num_sep)
+    return reverse_num_sep
+
+
     
-reverse(1234)

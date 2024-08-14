@@ -32,8 +32,4 @@ def convert(s):
     
     return result
 
-    
-    
-s = 'MCDXXVI'
-res = convert(s)
-print(res)
+
