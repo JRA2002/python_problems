@@ -1,19 +1,28 @@
 def binary_search(arr, target):
     left = 0
     right = len(arr) - 1
+    
     while left <= right:
         midd = (left + right) // 2
         if arr[midd] == target:
-            return midd
+            i = midd
+            j = midd
+            count = 1
+            while target == arr[i+1]:
+                count += 1
+                i += 1
+            while target == arr[j-1]:
+                count += 1
+                j -= 1
+
+            return count
         elif arr[midd] < target:
             left = midd + 1
         else:
             right = midd - 1
     return -1
 
-arr = [2,4,6,7,9,12,15]
-res = binary_search(arr, 15)
-print(res)
+
 
 
 # using recursion to find binary search
@@ -34,6 +43,3 @@ def recursion_binary(target, arr, min, max):
         else:
             return midd
         
-arr = [2,4,6,7,9,12,15]   
-res = recursion_binary(6, arr, 0, 6)
-print(res)
