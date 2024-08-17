@@ -1,6 +1,9 @@
-'''Kth Largest Element in an Array - Quick Select Algorithm'''
+'''Given an array arr[] of N distinct elements and a number K, 
+where K is smaller than the size of the array. Find the Kth 
+smallest element in the given array.'''
 
-def find_kthelement(nums: list, k: int):
+
+def kth_smallest(nums, k): 
     k = k - 1
 
     def quickselect(left, right):
@@ -21,9 +24,8 @@ def find_kthelement(nums: list, k: int):
         
     return quickselect(0, len(nums) - 1)
 
-nums = [4,1,8,2,9,5]
-res = find_kthelement(nums, 2)
+arr = [10, 20, 15, 2, 23, 90, 67]
+start  = 0
+end  = len(arr) - 1
+res = kth_smallest(arr, 3)
 print(res)
-print(nums)
-
-        
