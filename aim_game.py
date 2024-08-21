@@ -54,9 +54,9 @@ def draw(win, targets):
     for target in targets:
         target.draw(win)
         print('hello')
-<<<<<<< HEAD
+
     pygame.display.update()
-=======
+
     
     
 def format_time(secs):
@@ -111,7 +111,6 @@ def end_screen(win, elapsed_time, targets_pressed, clicks):
                 
 def get_middle(surface):
     return WIDTH / 2 - surface.get_width()/2
->>>>>>> f28610fe158d28112cded3461ba0091412f7d5fb
 
 def main():
     run  = True

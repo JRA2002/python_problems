@@ -1,7 +1,7 @@
 '''Given an array that contains both positive and negative 
 integers, the task is to find the product of the maximum product subarray. '''
 
-# Kadane Algorithm
+
 def maxi_product(arr):
     max_new = arr[0]
     max_actual = 1
