@@ -1,35 +1,29 @@
 '''Given an m x n matrix, the task is to print all elements of the matrix in spiral form.'''
 
-def spiral(arr):
-    
-    k = 1
-    n = len(arr) - 1 -1
-    j = 2 +1
-    m = 0-1
-
-    first = arr[k][:n]
-    for i in first:
-         print(i)
-    
-    for i in range(k,len(arr) - j):
-        last = arr[i][n]
-        print(last)
+def spiral(arr , n, m):
+        top = 0
+        bottom = n - 1
+        left = 0
+        right = m - 1
         
-    reverse = arr[m - 1][::-1][:m-1]
-    print(reverse)
-    for i in reverse:
-        print(i,'yoyo')
-    for i in range(len(arr) - 1, 1, -1):
-        first_ele = arr[i][0]
-        print(first_ele)  
-   
+        while right > left:
+            for i in range(left,right + 1):
+                print(arr[left][i], end=' ')
+            top += 1
 
+            for i in range(top,bottom + 1):
+                print(arr[i][right], end=' ')
+            right -= 1
 
+            for i in range(right, left - 1, -1):
+                print(arr[bottom][i],end=' ')
+            bottom -= 1
+            if bottom >= top:
+                for i in range(bottom, left, -1):
+                    print(arr[i][left], end=' ')
+                left += 1
+        
+arr = [[1,2,3,4], [5,6,7,8], [9,10,11,12], [13,14,15,16]]
 
+spiral(arr, len(arr), len(arr[0]))
 
-
-
-arr= [[1,2,3,4], [5,6,7,8], 
-      [9,10,11,12], [13,14,15,16]]
-
-spiral(arr)
