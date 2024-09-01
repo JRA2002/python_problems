@@ -27,8 +27,8 @@ def triplet_sum(arr, suma):
 
     
         
-arr = [1, 4, 45, 6, 10, 8]
-res = triplet_sum(arr, 22)
+arr = [2, 4, 45, 6, 10, 8]
+res = triplet_sum(arr, 13)
 print(res)
 # Time complexity: O(N) 
 # Auxiliary Space: O(1)
