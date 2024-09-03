@@ -30,3 +30,7 @@ print(res)
 
 # Time Complexity:O(N^2)
 # Auxiliary Space: O(1)
+
+a = 'a'
+if isinstance(a, int):
+    print('kello')
