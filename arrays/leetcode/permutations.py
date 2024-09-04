@@ -15,8 +15,8 @@ def permutations(nums):
         print(nums)
         nums.append(n)
         print(nums)
-    
 
-nums = [1,2,3]
-res = permutations(nums)
+nums = {3:1, 2:2, 1:3}
+res = max(nums)
 print(res)
+    
