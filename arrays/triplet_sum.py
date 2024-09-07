@@ -18,7 +18,7 @@ def triplet_sum(arr, suma):
                 return True
             i += 1
         else:
-            if arr[i] < arr[j]:
+            if arr[i] < arr[j]: 
                 i += 1
             else:
                 j -= 1
