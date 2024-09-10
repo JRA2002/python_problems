@@ -1,7 +1,6 @@
-'''Given an array A[] consisting of only 0s, 1s, and 2s. The task is to sort 
-the array, i.e., put all 0s first, then all 1s and all 2s in last'''
+'''Given an array arr containing only 0s, 1s, and 2s. Sort the array in ascending order.'''
 
-def national_flag(arr: list):
+def sort_one_twos(arr):
     l = 0
     h = len(arr) - 1
     m = 0
@@ -17,9 +16,7 @@ def national_flag(arr: list):
             arr[m], arr[h] = arr[h], arr[m]
             h -= 1
     return arr
-            
 
-
-arr = [0, 1, 1, 0, 1, 2, 1, 2, 0, 0, 0, 1]
-res = national_flag(arr)
+arr = [0,2,1,2,0]
+res = sort_one_twos(arr)
 print(res)
