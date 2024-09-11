@@ -23,14 +23,16 @@ def next_greater_letter(letters):
                 return letters[midd+1]
         else:
             i += 1
-    if midd < len(letters) - 1:
+    if midd <= len(letters) - 1:
+        if letters[midd] < target:
+            return letters[0]
         return letters[midd]
     else:
         print(midd)
         return letters[0]
 
 letters = ["c","e","j","l"]
-target = 'k'
+target = 'n'
 
 res = next_greater_letter(letters)
 print(res)
