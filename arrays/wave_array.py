@@ -3,16 +3,15 @@
 arr[0] >= arr[1] <= arr[2] >= arr[3] <= arr[4] >= …..'''
 
 def wave(arr):
-    for i in range(0, len(arr) - 2, 2):
-        
-            if arr[i] <= arr[i+1]:
-                arr[i], arr[i+1] = arr[i+1], arr[i]
-            if arr[i+1] >= arr[i+2]:
-                arr[i+1], arr[i+2] = arr[i+2], arr[i+1]
-
+    i = 0
+    j = len(((arr))) - 1
+    while i < j :
+        if arr[i] < arr[i+1]:
+            arr[i], arr[i+1] = arr[i+1], arr[i]
+        i += 2
     return arr
 
-arr = [20, 10, 8, 6, 4, 2]
+arr = [3,5,7,1,2,99,10]
 res = wave(arr)
 print(res)
 

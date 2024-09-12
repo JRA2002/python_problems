@@ -5,7 +5,7 @@ Note: The pairs must be returned in sorted order, the solution
 array should also be sorted, and the answer must not contain 
 any duplicate pairs.'''
 
-def getPairs(arr):
+def getPairs(arr: list):
         # code here
         arr.sort()
         i = 0
