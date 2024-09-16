@@ -8,24 +8,34 @@ to appear at the end of the array , same condition for negative numbers also .''
 def rearrange(arr: list):
     neg = []
     pos = []
-    final = []
-    for i in range(len(arr)):
+    n = len(arr)
+    
+    for i in range(n):
         if arr[i] < 0:
             neg.append(arr[i])
         else:
             pos.append(arr[i])
     i = 0
-    if len(neg) < len(pos):
-        while i < len(neg):
-            final.append(neg[i])
-            final.append(pos[i])
-            i += 1
-        while  i < len(pos):
-            final.append(arr[i])
-            i += 1        
+    k = 0
+    j = 0
+    while i < len(pos) and j < len(neg):
+        arr[k] = pos[i]
+        i += 1
+        k += 1
+        arr[k] = neg[j]
+        j += 1
+        k += 1
+    while i < len(pos):
+        arr[k] = pos[i]
+        i += 1
+        k += 1
+    while j < len(neg):
+        arr[k] = neg[j]
+        j += 1
+        k += 1    
+    return arr
 
-    return final           
 
-arr = [-5, -2, 5, 2, 4, 7, 1, 8, 0, -8]
+arr = [35, -43, 29, 32, 29 ,-37, 46 ,39, -3, -43,-19, 32, 43, 27 ,28, 11 ,43, -21, -35 ,-25, -2, 36, -13, -6, 2, -45, -37, -4, -37, 35, -46 ,5, -13, 10, 41 ,-34, -30 ,28 ,-47, -9 ,26, 21 ,-44, 17, 16 ,-5, 39, 14, -35, 24, -9, 12 ,-15, 31, -32, 32, 47, 16, -30]
 res = rearrange(arr)
 print(res)
