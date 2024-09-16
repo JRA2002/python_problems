@@ -15,8 +15,21 @@ def is_perfect(N):
 
 #optimal approach
 def is_perfect1(N):
-    pass
+    suma = 1
+    i = 2
+    while i * i < N:
+        if N%i == 0:
+            if i == N//i:
+                suma += i
+            else:
+                suma += i
+                suma += N//i
+        i += 1
+    if suma == N:
+        return 1
+    return 0
 
-N = 10
-res = is_perfect((N))
+
+N = 6
+res = is_perfect1((N))
 print((res))
