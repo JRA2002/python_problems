@@ -56,7 +56,7 @@ def rearrange(n, arr):
 def rearrange_1(n, arr):
     for i in range(n):
             key = arr[i]
-            if key > 0:
+            if key < 0:
                   continue
             j = i - 1
             while j >= 0 and arr[j] >= 0:
@@ -70,7 +70,7 @@ def rearrange_1(n, arr):
 # Auxiliary Space: O(1)  
 
 
-arr = [1,-2,-3,4,-5,6]
+arr = [-1 ,-1 ,0, 0, 1,1]
 n = len(arr)
 res = rearrange_1(n, arr)
 print(res)
