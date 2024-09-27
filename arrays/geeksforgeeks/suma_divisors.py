@@ -20,7 +20,16 @@ def sum_divisors(N):
         res += find_suma(i)
     return res
 
+# optimal approach
 
-N = 10
-res = sum_divisors(N)
+def sum_divisors2(N):
+    suma = 0
+    for i in range(1, N+1):
+        res = N//i
+        suma += i*res
+    return suma
+
+    
+N = 500000
+res = sum_divisors2(N)
 print(res)
