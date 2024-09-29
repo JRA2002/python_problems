@@ -5,30 +5,39 @@ array would be removed, in the third step again the maximum,
  and so on. Continue this till the array contains only one 
  element. And find the final element remaining in the array.'''
 
-def find_left_over(arr: list):
+
+
+def leftElement(arr) -> int:
+        # code here
+        arr.sort()
+        i = 0
+        j = len(arr) - 1
+       
+        
+        while i <= j:
+            if i == j:
+                return arr[0]
+            else:
+                arr.pop(j)
+                j -= 1
+            if i == j:
+                return arr[0]
+            else:
+                arr.pop(i)
+                j -= 1
+                
+        
+#optimal approach
+
+def find_left_over2(arr: list):
     arr.sort()
-    i = 0
-    j = len(arr) - 1
+    n = len(arr)
+    if n % 2 == 0:
+        return arr[n//2 - 1]
+    else:
+        return arr[n//2]
+
    
-    if len(arr) == 1:
-        return arr[0]
-    
-    while i <= j:
-        if len(arr) == 1:
-            return arr[0]
-        else:
-            
-            arr.pop(j)
-            print(arr)
-            j -= 1
-        if len(arr) == 1:
-            return arr[0]
-        else:
-            
-            
-            arr.pop(i)
-            print(arr)
-        print(i,j)   
-arr = [7, 8, 3, 4, 2, 9, 5]
-res = find_left_over(arr)
+arr = [8, 1, 2, 9, 4, 3, 7, 5]
+res = find_left_over2(arr)
 print(res)
