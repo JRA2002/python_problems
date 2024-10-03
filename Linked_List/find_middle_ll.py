@@ -33,8 +33,9 @@ class LinkedList:
         position = 0
 
         while current_node != None and (position + 1) < index:
-                position += 1
+                
                 current_node = current_node.next
+                position += 1
         middle = current_node.next.data
         
         return middle
@@ -47,16 +48,16 @@ class LinkedList:
 
 
 llist = LinkedList()
+llist.insertNode(1)
 llist.insertNode(2)
 llist.insertNode(3)
 llist.insertNode(4)
 llist.insertNode(5)
 llist.insertNode(6)
-llist.insertNode(7)
 
-print("Node Data")
-llist.printLL()
-print("sizee linked list")
+
+
+print("size linked list")
 res = llist.size_llist()
 print(res)
 print("middle od the linked list")
