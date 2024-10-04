@@ -16,9 +16,9 @@ def peak_element(a):
                     j = midd - 1
             else:
                  return a[midd]
-                
+            
 
-a = [1, 2, 3, 4, 5, 6]
+a = [1, 2, 3, 4, 5, 6,1,2,3]
 
 res = peak_element(a)
 print(res)
