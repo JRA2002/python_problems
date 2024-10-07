@@ -9,21 +9,25 @@ def mysqrt(x):
         while i * i <= x:
             i += 1
         return i - 1
+
+
 # optimal approach
 
 def mysqrt2(x):
-    i = 0
-    j = x
-    while i <= j:
-        midd = (i + j)//2
-        print(midd)
-        if midd * midd == x:
-             return midd
-        elif midd * midd > x:
-             j = midd - 1
+    if x == 0 or x == 1:
+         return x
+    s = 1
+    e = x
+   
+    while s <= e:
+        m = (e-s)//2 + s
+        if m * m == x:
+            return m
+        elif m * m > x:
+            e = m - 1
         else:
-             i = midd + 1
-    return midd
-x = 19
+            s = m + 1 
+    return e
+x = 8
 res = mysqrt2(x)
 print(res)
