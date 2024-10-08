@@ -23,4 +23,4 @@ def perect_square(num: bool):
 num = 18
 res = perect_square(num)
 
-print(b)
+print(res)
