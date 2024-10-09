@@ -16,7 +16,9 @@ def primes_sum(N: int):
                 while i * h <= N:
                     lista[i*h] = 0
                     h += 1
+        print(primes)
         return primes
+    
     p = get_primes(N)
     i = 0
     j = len(p) - 1
@@ -24,13 +26,38 @@ def primes_sum(N: int):
         if p[i] + p[j] > N:
             j -= 1
         elif p[i] + p[j] == N: 
-            return True
+            return p[i] ,p[j]
         else:
             i += 1
     return False
 
+# optimal solution
 
-N = 23
 
-res = primes_sum(N)
+def is_prime(N):
+    if N == 2 or N==3:
+        return True
+    i = 2
+    while i * i <= N:
+        if  N%i == 0:
+            return False
+        i += 1
+    return True
+    
+def is_possible(num):
+    if num < 4:
+        return False
+    if num % 2 == 0:
+        return True
+    return is_prime(num - 2)
+    
+def primes_sum2(N):
+    if is_possible(N):
+        return 'Yes'
+    return 'No'
+       
+
+N = 34
+
+res = primes_sum2(N)
 print(res)
