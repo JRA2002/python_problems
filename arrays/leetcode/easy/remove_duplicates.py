@@ -7,12 +7,9 @@ Return k.'''
 
 def remove_duplicates(nums: list):
     i = 0
-    j = len(nums) - 1
-
-    while i <= j:
-        
-
-nums = [0,0,1,1,1,2,2,3,3,4]
+    res = []
+    f
+nums = [1,1,2,2,3,3,3,4,4]
 
 res = remove_duplicates(nums)
 print(res)
