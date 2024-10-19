@@ -6,10 +6,37 @@ Change the array nums such that the first k elements of nums contain the unique 
 Return k.'''
 
 def remove_duplicates(nums: list):
-    i = 0
+    # we store the unique elements in res
     res = []
-    f
-nums = [1,1,2,2,3,3,3,4,4]
+    for num in nums:
+        if num not in res:
+            res.append(num)
+    # iterate over nums
+    i = 0
+    j = 0
+    n = len(nums) - 1
+    while i <= n and j <= len(res) - 1:
+        if nums[i] == res[j]:
+            nums[i], nums[j] = nums[j], nums[i] #swap if nums[i] equal to res[j]
+            i += 1
+            j += 1
+        else:
+            i += 1
+        
+    return len(res)
+
+# OTHER APPROACH using less memory
+
+def remove_duplicates2(nums: list):
+    j = 1
+    n = len(nums)
+    for i in range(1, n):
+        if nums[i] != nums[i-1]:
+            nums[j] = nums[i]
+            j += 1
+    return j
+
+nums = [1,1,2]
 
 res = remove_duplicates(nums)
 print(res)
