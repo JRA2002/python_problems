@@ -3,9 +3,13 @@
 x mod y denotes the remainder when x is divided by y.'''
 
 def smallest_index(nums: list):
-    pass
+    n = len(nums)
+    for i in range(n):
+        if nums[i] == (i%10):
+            return i
+    return -1
 
-nums = [0,1,2]
+nums = [4,3,2,1]
 
 res = smallest_index(nums)
 print(res)
