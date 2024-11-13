@@ -15,12 +15,20 @@ def convert(arr: list, n):
         arr[i] = hashmap[num]
         i += 1
     
+# optimal approach
 
-
-
-
+def convert2(arr: list, n):
+    
+    ans = []
+    for i in range(n):
+        ans.append((arr[i], i))
+    ans.sort()
+   
+    for i in range(n):
+        arr[i] = ans[i][1]
+    
 arr = [5, 10, 40, 30, 20]
 n = len(arr)
 
-res = convert(arr, n)
+res = convert2(arr, n)
 print(res)
