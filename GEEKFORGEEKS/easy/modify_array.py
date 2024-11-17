@@ -11,22 +11,21 @@ def modify_array(arr: list):
         if arr[i] == arr[i+1]:
             arr[i] = arr[i]*2
             arr[i+1] = 0
-    print(arr)
+    
     i = 0
-    j = i + 1
-    print(i,j)
-    while i < j and j < n and i < n:
-        print(i,j)
+    j = 1
+    
+    while i <= n-1 and j <= n-1:
         if arr[i] == 0 and arr[j] != 0:
             arr[i], arr[j] = arr[j], arr[i]
             i += 1
             j += 1
            
-        if i+1<n and j+1<n:
-            if arr[i] != 0:
-                i += 1
-            if arr[j] == 0:
-                j += 1
+        elif arr[i] == 0 and arr[j] == 0:
+            j += 1
+        else:
+            i += 1
+            j += 1
 
     return arr
 

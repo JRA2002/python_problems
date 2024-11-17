@@ -18,6 +18,6 @@ def move_zeros_end(arr):
         
     return arr
 
-arr = [0,0,0,3,4,5]
+arr = [14, 26, 0, 40, 0, 13, 19, 11, 18, 34, 0, 11, 17, 15, 26, 0, 10, 12, 19]
 res = move_zeros_end(arr)
 print(arr)
