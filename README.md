@@ -9,7 +9,7 @@ Este repositorio está pensado para aquellos que desean mejorar sus habilidades 
 
 ### Pre-requisitos
 
-Conocimeintos basicos de bucles,condicionales,DSA 
+Conocimeintos de condicionales, bucles, DSA 
 
 ### Estructura del repositorio
 
