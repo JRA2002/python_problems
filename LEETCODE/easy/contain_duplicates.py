@@ -25,6 +25,7 @@ def contain_duplicates_sort(nums: list):
         if nums[i] == nums[i+1]:
             return True
     return res
+
 nums = [1,2,31,1,2]
 res = contain_duplicates_sort(nums)
 print(res)

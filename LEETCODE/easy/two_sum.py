@@ -22,12 +22,13 @@ def two_sum(nums: list, target: int):
 
 def two_sum2(nums: list, target: int):
     mapa = {}
-    for i in range(len(nums)):
-            mapa[nums[i]] = i
     
     for i in range(len(nums)):
-        if target-nums[i] in mapa and mapa[target-nums[i]] != i:
-            return [i, mapa[target-nums[i]]]
+        diff = target - nums[i]
+        if diff in mapa:
+            return [mapa[diff], i]
+        mapa[nums[i]] = i
+        
     return []
 
 
