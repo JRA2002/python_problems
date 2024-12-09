@@ -28,15 +28,16 @@ def remove_duplicates(nums: list):
 # OTHER APPROACH using less memory
 
 def remove_duplicates2(nums: list):
-    j = 1
-    n = len(nums)
-    for i in range(1, n):
-        if nums[i] != nums[i-1]:
-            nums[j] = nums[i]
-            j += 1
-    return j
+    l = 0
+     
+    for r in range(len(nums)):
+        if nums[r] != nums[l]:
+            l += 1
+            nums[r], nums[l] = nums[l], nums[r]
+    print(nums)
+    return l+1
 
-nums = [1,1,2]
+nums = [1,1,1,2,2,2,3]
 
-res = remove_duplicates(nums)
+res = remove_duplicates2(nums)
 print(res)
